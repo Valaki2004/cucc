@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="cucc.View.UsersView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:cucc.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Border Background="Wheat">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="4*"></RowDefinition>
+                <RowDefinition Height="4*"></RowDefinition>
+                <RowDefinition Height="4*"></RowDefinition>
+                <RowDefinition Height="4*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="5*"></ColumnDefinition>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Information 10" FontSize="25" Foreground="DarkOrange" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Height="34" Width="162"/>
+
+            <TextBlock Grid.Row="1" Text="Item Name:" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Height="26" Width="109" Margin="30,0,0,0"></TextBlock>
+
+            <TextBox Grid.Row="1" Grid.Column="1" Margin="0,0,10,87" Grid.RowSpan="2"/>
+            <TextBox Grid.Row="1" Grid.Column="2" Margin="10,0,20,87" Grid.RowSpan="2"></TextBox>
+
+            <TextBlock Grid.Row="2" Margin="25" VerticalAlignment="Center">Price:</TextBlock>
+            <TextBlock Grid.Row="3" Margin="25" VerticalAlignment="Center">Description:</TextBlock>
+
+            <TextBox Grid.Row="2" Grid.Column="1" Margin="0,18,10,18"></TextBox>
+            <TextBox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,23,20,22"/>
+
+            <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Height="80" Width="100" Content="Add to Cart" Background="Olive" Foreground="White"/>
+                <Button Height="80" Width="100" Margin="15, 0, 0, 0" Content="View Detail" Background="OrangeRed" Command="{Binding openHOme}"/>
+            </StackPanel>
+
+        </Grid>
+    </Border>
+</UserControl>
